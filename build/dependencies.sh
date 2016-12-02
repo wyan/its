@@ -19,7 +19,8 @@ install_linux() {
 }
 
 install_osx() {
-    true
+    brew update > /dev/null
+    brew install expect
 }
 
 "$1"
