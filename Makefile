@@ -204,7 +204,7 @@ $(SIMH):
 	$(MAKE) -C tools/simh pdp10
 
 $(KA10):
-	$(MAKE) -C tools/sims ka10 TYPE340=y
+	$(MAKE) -C tools/sims ka10 TYPE340=y CFLAGS_G="-I/opt/X11/include"
 
 $(ITSTAR):
 	$(MAKE) -C tools/itstar

@@ -21,6 +21,9 @@ install_linux() {
 install_osx() {
     brew update > /dev/null
     brew install expect
+    case "$EMULATOR" in
+        sims) brew install sdl2;;
+    esac
 }
 
 "$1"
