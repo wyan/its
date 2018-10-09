@@ -1,0 +1,8 @@
+
+PDP-11 simulator V4.0-0 Current        git commit id: e1db7dec
+Disabling XQ
+build/sims/gt40-9> at dli 10005,connect=localhost:10000
+Listening on port 10005
+
+Simulation stopped, PC: 166466 (TSTB 175610)
+main(): Unexpected User event: 5

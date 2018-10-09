@@ -13,6 +13,8 @@ TEST ?= test
 GIT ?= git
 CAT ?= cat
 
+OSTYPE = $(shell uname)
+
 include conf/network
 
 # The directores listed in SRC, DOC, and BIN are put on the sources tape.
@@ -107,9 +109,15 @@ $(OUT)/ka-minsys.tape: $(ITSTAR) $(OUT)/system
 $(OUT)/sources.tape: $(ITSTAR) build/$(EMULATOR)/stamp $(OUT)/syshst/$(H3TEXT)
 	$(MKDIR) $(OUT)
 	$(RM) -f src/*/*~
+ifeq ($(OSTYPE),Darwin)
+	$(TOUCH) -t 8110061903.37 'bin/emacs/einit.:ej'
+	$(TOUCH) -t 8109192142.56 'bin/emacs/[pure].162'
+	$(TOUCH) -t 8103312041.45 'bin/emacs/[prfy].173'
+else
 	$(TOUCH) -d 1981-10-06T19:03:37 'bin/emacs/einit.:ej'
 	$(TOUCH) -d 1981-09-19T21:42:56 'bin/emacs/[pure].162'
 	$(TOUCH) -d 1981-03-31T20:41:45 'bin/emacs/[prfy].173'
+endif
 	$(ITSTAR) -cf $@ -C src $(SRC)
 	$(ITSTAR) -rf $@ -C doc $(DOC)
 	$(ITSTAR) -rf $@ -C bin $(BIN)
