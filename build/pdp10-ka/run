@@ -19,16 +19,16 @@ set dpy enabled
 set dk disabled
 set stk enabled
 set tk enabled
-at tk 10000 speed=300
+at -U tk 10000 speed=300
 # 10001 reserved for GE bagbiters, hah.
 set dpk enabled
-at dpk 10002 speed=4800
+at -U dpk 10002 speed=4800
 set mty enabled
-at mty 10003 speed=50000
+at -U mty 10003 speed=50000
 set ten11 enabled
-at ten11 10011
+at -U ten11 10011
 set auxcpu enabled
-at auxcpu 10006
+at -U auxcpu 10006
 set imp enabled
 set imp mac=e2:6c:84:1d:34:a3
 set imp ip=192.168.2.101/24
