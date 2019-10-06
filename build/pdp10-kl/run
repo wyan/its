@@ -1,7 +1,7 @@
 set console wru=034
 set cpu its
 set cpu idle
-set cpu 2048k
+set cpu 4096k
 set rpb dis
 set tua dis
 set lpt dis
