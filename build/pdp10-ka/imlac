@@ -1,3 +1,6 @@
+enable mit mode true
+set cpu type PDS1
 set bootstrap stty
-attach tty telnet localhost d10016
+set framerate throttle true
+attach tty raw localhost d10016
 go
