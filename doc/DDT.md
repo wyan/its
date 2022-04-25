@@ -25,7 +25,7 @@ The ◊ character represents typing <kbd>ESC</kbd>, or holding down the
 | /foo/bar      |                                 | :foo;bar                 |
 | cp f1 f2      | ◊<kbd>^R</kbd> f1,f2            | :copy f1,f2              |
 | rm file       | <kbd>^O</kbd> file              | :delete file             |
-| ln f1 f2      | ◊<kbd>^O</kbd> f1,f2            | :link f1,f2              |
+| ln f1 f2      | ◊<kbd>^O</kbd> f1,f2            | :link f2,f1              |
 | mv f1 f2      | ◊◊<kbd>^O</kbd> f1,f2           | :rename f1,f2            |
 | mv file dir   |                      | :move file,dir           |
 | emacs         | emacs<kbd>^K</kbd>   | :emacs                   |
